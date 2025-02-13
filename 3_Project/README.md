@@ -127,7 +127,7 @@ plt.show()
 
 ### Results
 
-![Trending Top Skills for Data Analysts in the USA and Germany](3_Project\images\Trending_Top_skills.png)
+![Trending Top Skills for Data Analysts in the USA and Germany](Job_Market_Analysis/tree/main/3_Project/images/Trending_Top_skills.png)
 _Bar graph visualizing the trending top skills for data analysts in the USA and Germany in 2023._
 
 ### Insights
