@@ -66,7 +66,7 @@ fig.tight_layout(h_pad=0.8, w_pad=2.5)  # Adjust spacing between plots
 plt.show()
 ```
 
-![Visualization of Top Skills for Data Nerds in the USA and Germany](https://drive.google.com/file/d/1m5LnF4gZPF2-hVu2KBayu1sUJOBROPC6/view?usp=drive_link)
+![Visualization of Top Skills for Data Nerds in the USA and Germany](https://github.com/chriskorol/Job_Market_Analysis/blob/main/3_Project/images/Salary_distribution_of_top_6.png)
 
 ### Insights
 
