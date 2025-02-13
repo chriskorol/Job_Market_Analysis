@@ -223,7 +223,7 @@ plt.show()
 
 #### Results
 
-![The Highest Paid & Most In-Demand Skills for Data Analysts in the US and Germany](Job_Market_Analysis/blob/main/3_Project/images/highest_paid_skills.png)
+![The Highest Paid & Most In-Demand Skills for Data Analysts in the US and Germany](https://github.com/chriskorol/Job_Market_Analysis/blob/main/3_Project/images/highest_paid_skills.png)
 _For separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US._
 
 #### Insights
