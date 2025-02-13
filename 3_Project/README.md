@@ -176,7 +176,7 @@ plt.show()
 
 #### Results
 
-![Salary Distributions of Data Jobs in the US and Germany](3_Project\images\Salary_distribution_of_top_6.png)
+![Salary Distributions of Data Jobs in the US and Germany](Job_Market_Analysis/tree/main/3_Project/images/Salary_distribution_of_top_6.png)
 _Box plot visualizing the salary distributiona for the top 6 data titles._
 
 #### Insights
