@@ -239,3 +239,81 @@ Both markets heavily demand Python, SQL, and Tableau, but the USA offers higher 
 ##### Key Comparison:
 
 The USA provides higher salaries for both niche and general skills, making it lucrative for specialists. Germany offers steadier compensation, with a focus on advanced cloud and data engineering tools. Professionals should prioritize skills like Python, SQL, and Tableau for both markets while considering niche technologies for their targeted region.
+
+### Visualizing Different Techonologies
+
+Let's visualize the different technologies as well in the graph. We'll add color labels based on the technology (e.g., {Programming: Python})
+
+#### Visualize Data
+
+```python
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+
+plt.figure(figsize=(8, 6))
+
+for country, color, df in [('USA', 'orange', df_DA_skills_high_demand), ('Germany', 'orange', df_DA_skills_high_demand_DE)]:
+    plt.scatter(df['skill_percent'], df['median_salary'], color=color, label=country)
+    texts = [plt.text(df['skill_percent'].iloc[i], df['median_salary'].iloc[i], txt, color=color) for i, txt in enumerate(df.index)]
+    adjust_text(texts, arrowprops=dict(arrowstyle='->', color='gray'))
+
+plt.xlabel('Percent of Data Analyst Jobs')
+plt.ylabel('Median Salary ($USD)')
+plt.title('Most Optimal Skills for Data Analysts (USA vs Germany)')
+plt.legend()
+plt.gca().yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f'${int(y/1000)}K'))
+plt.tight_layout()
+plt.show()
+```
+
+#### Results
+
+![TA scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in the US with color labels for technology.](https://github.com/chriskorol/Job_Market_Analysis/blob/main/3_Project/images/Optimal_skills.png)
+
+#### Insights
+
+- **Programming skills (Python, R) → Higher salaries**  
+  Programming expertise leads to better salary potential in both countries.  
+  These skills are essential for automation, data processing, and advanced analytics.
+
+- **Database skills (SQL, Spark) → High demand & strong pay**  
+  SQL remains a fundamental requirement for data analysts.  
+  Big data tools like Spark are associated with higher salaries, especially in advanced roles.
+
+- **Analyst tools (Tableau, Power BI) → Essential & widely used**
+  Frequently listed in job postings, indicating industry-wide demand.  
+  These tools provide competitive salaries and are crucial for visualization & business intelligence.
+
+- **USA vs Germany → Salary differences exist**
+  The USA generally offers higher salaries, but skill demand patterns are similar.  
+  SQL, Python, and Tableau dominate both markets as key skills for data analysts.
+
+**Optimal skill set:** A combination of **SQL, Python, and a visualization tool (Tableau/Power BI)** is the best strategy for a high-paying data analytics career.
+
+# What I Learned
+
+Through this project, I gained deeper insights into the data analyst job market while refining my Python skills, particularly in data manipulation and visualization. Here are some key takeaways:
+
+- **Advanced Python Applications** – Leveraged **Pandas** for data processing and **Seaborn/Matplotlib** for visualization, streamlining complex analytical tasks.
+- **Data Cleaning as a Foundation** – Realized that **thorough data cleaning** is essential to ensure accurate and meaningful insights.
+- **Strategic Skill Alignment** – Learned to analyze **skill demand, salaries, and job availability**, enabling more informed career planning in the tech field.
+
+# Insights
+
+This project revealed key insights into the data analyst job market:
+
+- **Skill Demand vs. Salary** – High-demand skills like **Python and Oracle** often lead to better salaries, showing a direct link between expertise and earnings.
+- **Evolving Market Trends** – The demand for specific skills shifts over time, emphasizing the need for continuous learning to stay competitive.
+- **Maximizing Economic Value** – Identifying **in-demand, high-paying** skills helps analysts prioritize learning for better career and salary growth.
+
+# Challenges I Faced
+
+This project came with challenges but also valuable learning experiences:
+
+- **Managing Data Inconsistencies** – Handling missing and inconsistent data required careful cleaning to maintain analytical accuracy.
+- **Complex Visualizations** – Creating clear and impactful visuals for complex datasets was challenging but essential for effective storytelling.
+- **Depth vs. Breadth Balance** – Striking the right balance between deep analysis and a broad market overview was crucial for comprehensive insights.
+
+# Conclusion
+
+This deep dive into the data analyst job market provided valuable insights into key skills and industry trends. The findings not only enhanced my understanding but also offer practical guidance for career growth in data analytics. As the field evolves, continuous analysis will be crucial for staying competitive. This project serves as a strong foundation for future research and reinforces the need for lifelong learning and adaptability in the data industry.
